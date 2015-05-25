@@ -204,15 +204,15 @@
                             if(apiResponse.isSuccess){
                                 $('#email-subscribe-msg').text("Thank you for subscribing");
                                 $('#email-subscribe-msg').css('color','green');
-                                 $('#email-txt').val('');
-                                setTimeout(function () {
-                                    $('#email-subscribe-msg').text('');
-                                },5000);
                             }
                             else{
                                 $('#email-subscribe-msg').text(apiResponse.errMsg);                                
                                 $('#email-subscribe-msg').css('color','red');
                             }
+                            $('#email-txt').val('');
+                            setTimeout(function () {
+                                $('#email-subscribe-msg').text('');
+                            },5000);
                         })
                     })
                 </script>
